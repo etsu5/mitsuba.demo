@@ -1,9 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17421266988"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'AW-17421266988');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MITSUBA RELAX HEADSPA - Bangkok</title>
+    <title>MITSUBA RELAX HEADSPA - Premium Japanese Head Spa in Bangkok</title>
+    <meta name="description" content="MITSUBA RELAX HEADSPA offers premium Japanese head spa treatments in Bangkok. Experience deep relaxation with our signature head spa, EMS scalp treatments, and facial massage services.">
+    <meta name="keywords" content="head spa Bangkok, Japanese head spa, scalp treatment, EMS spa, facial massage Bangkok, relaxation spa, MITSUBA">
+
+    <!-- OGP Tags -->
+    <meta property="og:title" content="MITSUBA RELAX HEADSPA - Premium Japanese Head Spa in Bangkok">
+    <meta property="og:description" content="Where Japanese Precision Meets Thai Tranquility. Experience premium head spa treatments in the heart of Bangkok.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mitsuba-headspa.com">
+    <meta property="og:image" content="headspa-treatment.jpg">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:locale:alternate" content="th_TH">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MITSUBA RELAX HEADSPA - Premium Japanese Head Spa in Bangkok">
+    <meta name="twitter:description" content="Where Japanese Precision Meets Thai Tranquility. Experience premium head spa treatments in Bangkok.">
+    <meta name="twitter:image" content="headspa-treatment.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236b8e4e'/><text x='50' y='68' font-family='Georgia,serif' font-size='55' font-weight='bold' fill='white' text-anchor='middle'>M</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236b8e4e'/><text x='50' y='68' font-family='Georgia,serif' font-size='55' font-weight='bold' fill='white' text-anchor='middle'>M</text></svg>">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@200;300;400;500&display=swap');
         
@@ -59,20 +91,14 @@
             z-index: 9999;
         }
 
-        /* Social Float Buttons */
-        .social-float-container {
+        /* Instagram Float Button */
+        .instagram-float {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            z-index: 999;
-        }
-
-        .instagram-float, .whatsapp-float {
             width: 60px;
             height: 60px;
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -81,26 +107,19 @@
             color: white;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease;
+            z-index: 999;
             animation: pulse 2s infinite;
         }
 
-        .instagram-float {
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-        }
-
-        .whatsapp-float {
-            background: #25d366;
-        }
-
-        .instagram-float:hover, .whatsapp-float:hover {
+        .instagram-float:hover {
             transform: translateY(-5px) scale(1.1);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
         @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
-            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+            0% { box-shadow: 0 0 0 0 rgba(188, 24, 136, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(188, 24, 136, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(188, 24, 136, 0); }
         }
 
         /* Gallery Section */
@@ -1089,14 +1108,8 @@
                 padding: 0 20px;
             }
 
-            /* Social float buttons adjustment */
-            .social-float-container {
-                bottom: 20px;
-                right: 20px;
-                gap: 10px;
-            }
-
-            .instagram-float, .whatsapp-float {
+            /* Instagram float button adjustment */
+            .instagram-float {
                 width: 56px;
                 height: 56px;
             }
@@ -1251,19 +1264,15 @@
                 gap: 40px;
             }
 
-            /* Social float buttons */
-            .social-float-container {
-                bottom: 15px;
-                right: 15px;
-                gap: 8px;
-            }
-
-            .instagram-float, .whatsapp-float {
+            /* Instagram float button */
+            .instagram-float {
                 width: 50px;
                 height: 50px;
+                bottom: 20px;
+                right: 20px;
             }
 
-            .instagram-float svg, .whatsapp-float svg {
+            .instagram-float svg {
                 width: 24px;
                 height: 24px;
             }
@@ -1370,19 +1379,12 @@
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
 
-    <!-- Social Float Buttons -->
-    <div class="social-float-container">
-        <a href="https://wa.me/66646681515" target="_blank" class="whatsapp-float">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-            </svg>
-        </a>
-        <a href="https://www.instagram.com/mitsuba.bangkok/" target="_blank" class="instagram-float">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-            </svg>
-        </a>
-    </div>
+    <!-- Instagram Float Button -->
+    <a href="https://www.instagram.com/mitsuba.bangkok/" target="_blank" class="instagram-float">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+        </svg>
+    </a>
 
     <!-- Navigation -->
     <header>
@@ -1536,7 +1538,7 @@
                                     <span>30 min</span>
                                 </div>
                                 <div class="price-tag">
-                                    <span class="price-currency">฿</span>490
+                                    <span class="price-currency">฿</span>590
                                 </div>
                             </div>
                             <p class="service-description" data-en="Perfect introduction to our signature head spa experience. Includes scalp analysis and relaxing massage." data-ja="シグネチャーヘッドスパ体験への完璧な入門。頭皮分析とリラックスマッサージが含まれます。" data-th="การแนะนำที่สมบูรณ์แบบสู่ประสบการณ์เฮดสปาซิกเนเจอร์ของเรา รวมการวิเคราะห์หนังศีรษะและการนวดผ่อนคลาย">
@@ -1558,7 +1560,7 @@
                                     <span>45 min</span>
                                 </div>
                                 <div class="price-tag">
-                                    <span class="price-currency">฿</span>890
+                                    <span class="price-currency">฿</span>990
                                 </div>
                             </div>
                             <p class="service-description" data-en="Targeted treatment for stress and tension relief. Deep tissue massage combined with aromatherapy." data-ja="ストレスと緊張緩和のための的を絞った治療。アロマテラピーと組み合わせた深部組織マッサージ。" data-th="การรักษาเฉพาะเจาะจงเพื่อบรรเทาความเครียดและความตึงเครียด การนวดเนื้อเยื่อชั้นลึกผสมผสานกับอโรมาเธอราพี">
@@ -1580,7 +1582,7 @@
                                     <span>70 min</span>
                                 </div>
                                 <div class="price-tag">
-                                    <span class="price-currency">฿</span>1290
+                                    <span class="price-currency">฿</span>1390
                                 </div>
                             </div>
                             <p class="service-description" data-en="Complete mental rejuvenation with guided meditation, sound therapy, and luxury scalp treatment." data-ja="ガイド付き瞑想、サウンドセラピー、豪華な頭皮トリートメントで完全な精神的若返り。" data-th="การฟื้นฟูจิตใจอย่างสมบูรณ์ด้วยการนำสมาธิ เสียงบำบัด และทรีทเมนท์หนังศีรษะสุดหรู">
@@ -1602,11 +1604,55 @@
                                     <span>90 min</span>
                                 </div>
                                 <div class="price-tag">
-                                    <span class="price-currency">฿</span>1790
+                                    <span class="price-currency">฿</span>1890
                                 </div>
                             </div>
                             <p class="service-description" data-en="Our signature treatment for ultimate relaxation. Full body and mind reset with premium organic products." data-ja="究極のリラクゼーションのための私たちのシグネチャートリートメント。プレミアムオーガニック製品で全身と心をリセット。" data-th="ทรีทเมนท์ซิกเนเจอร์ของเราเพื่อการผ่อนคลายขั้นสูงสุด รีเซ็ตร่างกายและจิตใจอย่างเต็มที่ด้วยผลิตภัณฑ์ออร์แกนิกระดับพรีเมียม">
                                 Our signature treatment for ultimate relaxation. Full body and mind reset with premium organic products.
+                            </p>
+                            <button class="book-service" onclick="window.open('https://mitsuba.setmore.com/beta', '_blank')" data-en="Book This Service" data-ja="このサービスを予約" data-th="จองบริการนี้">Book This Service</button>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-header">
+                            <h3 class="service-name" data-en="Men's Scalp Revive Spa (EMS)" data-ja="メンズスカルプリバイブスパ (EMS)" data-th="สปาฟื้นฟูหนังศีรษะสำหรับผู้ชาย (EMS)">Men's Scalp Revive Spa (EMS)</h3>
+                            <p class="service-subtitle" data-en="EMS Scalp Treatment for Men" data-ja="男性向けEMS頭皮トリートメント" data-th="ทรีทเมนท์หนังศีรษะ EMS สำหรับผู้ชาย">EMS Scalp Treatment for Men</p>
+                        </div>
+                        <div class="service-body">
+                            <div class="service-details">
+                                <div class="duration-badge">
+                                    <span>⏱</span>
+                                    <span>70 min</span>
+                                </div>
+                                <div class="price-tag">
+                                    <span class="price-currency">฿</span>1690
+                                </div>
+                            </div>
+                            <p class="service-description" data-en="Advanced EMS technology combined with scalp treatment designed specifically for men. Promotes hair growth and scalp health." data-ja="男性専用に設計されたEMS技術と頭皮トリートメントの組み合わせ。育毛と頭皮の健康を促進します。" data-th="เทคโนโลยี EMS ขั้นสูงผสมผสานกับทรีทเมนท์หนังศีรษะที่ออกแบบมาสำหรับผู้ชายโดยเฉพาะ ส่งเสริมการเติบโตของเส้นผมและสุขภาพหนังศีรษะ">
+                                Advanced EMS technology combined with scalp treatment designed specifically for men. Promotes hair growth and scalp health.
+                            </p>
+                            <button class="book-service" onclick="window.open('https://mitsuba.setmore.com/beta', '_blank')" data-en="Book This Service" data-ja="このサービスを予約" data-th="จองบริการนี้">Book This Service</button>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-header">
+                            <h3 class="service-name" data-en="Women's Scalp Revive Spa (EMS)" data-ja="ウィメンズスカルプリバイブスパ (EMS)" data-th="สปาฟื้นฟูหนังศีรษะสำหรับผู้หญิง (EMS)">Women's Scalp Revive Spa (EMS)</h3>
+                            <p class="service-subtitle" data-en="EMS Scalp Treatment for Women" data-ja="女性向けEMS頭皮トリートメント" data-th="ทรีทเมนท์หนังศีรษะ EMS สำหรับผู้หญิง">EMS Scalp Treatment for Women</p>
+                        </div>
+                        <div class="service-body">
+                            <div class="service-details">
+                                <div class="duration-badge">
+                                    <span>⏱</span>
+                                    <span>70 min</span>
+                                </div>
+                                <div class="price-tag">
+                                    <span class="price-currency">฿</span>2190
+                                </div>
+                            </div>
+                            <p class="service-description" data-en="Premium EMS scalp treatment tailored for women. Includes deep cleansing, nourishing treatment, and hair care for beautiful, healthy hair." data-ja="女性向けにカスタマイズされたプレミアムEMS頭皮トリートメント。ディープクレンジング、栄養トリートメント、美しく健康な髪のためのヘアケアを含みます。" data-th="ทรีทเมนท์หนังศีรษะ EMS ระดับพรีเมียมที่ออกแบบมาสำหรับผู้หญิง รวมการทำความสะอาดล้ำลึก ทรีทเมนท์บำรุง และการดูแลเส้นผมเพื่อผมที่สวยและแข็งแรง">
+                                Premium EMS scalp treatment tailored for women. Includes deep cleansing, nourishing treatment, and hair care for beautiful, healthy hair.
                             </p>
                             <button class="book-service" onclick="window.open('https://mitsuba.setmore.com/beta', '_blank')" data-en="Book This Service" data-ja="このサービスを予約" data-th="จองบริการนี้">Book This Service</button>
                         </div>
@@ -1628,11 +1674,33 @@
                                     <span>40 min</span>
                                 </div>
                                 <div class="price-tag">
-                                    <span class="price-currency">฿</span>790
+                                    <span class="price-currency">฿</span>990
                                 </div>
                             </div>
                             <p class="service-description" data-en="Revitalizing facial massage using Japanese techniques to improve circulation and skin radiance." data-ja="血行を改善し、肌の輝きを高める日本の技術を使用した活性化フェイシャルマッサージ。" data-th="นวดหน้าฟื้นฟูด้วยเทคนิคญี่ปุ่นเพื่อปรับปรุงการไหลเวียนและความกระจ่างใสของผิว">
                                 Revitalizing facial massage using Japanese techniques to improve circulation and skin radiance.
+                            </p>
+                            <button class="book-service" onclick="window.open('https://mitsuba.setmore.com/beta', '_blank')" data-en="Book This Service" data-ja="このサービスを予約" data-th="จองบริการนี้">Book This Service</button>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-header">
+                            <h3 class="service-name" data-en="Facial Massage (EMS)" data-ja="フェイシャルマッサージ (EMS)" data-th="นวดหน้า (EMS)">Facial Massage (EMS)</h3>
+                            <p class="service-subtitle" data-en="EMS Facial Treatment" data-ja="EMSフェイシャルトリートメント" data-th="ทรีทเมนท์ใบหน้า EMS">EMS Facial Treatment</p>
+                        </div>
+                        <div class="service-body">
+                            <div class="service-details">
+                                <div class="duration-badge">
+                                    <span>⏱</span>
+                                    <span>40 min</span>
+                                </div>
+                                <div class="price-tag">
+                                    <span class="price-currency">฿</span>1490
+                                </div>
+                            </div>
+                            <p class="service-description" data-en="Advanced EMS facial treatment combining muscle stimulation with Japanese massage techniques for lifted, toned skin." data-ja="筋肉刺激と日本のマッサージ技術を組み合わせた先進的なEMSフェイシャルトリートメントで、引き締まったハリのある肌へ。" data-th="ทรีทเมนท์ใบหน้า EMS ขั้นสูงที่ผสมผสานการกระตุ้นกล้ามเนื้อกับเทคนิคการนวดแบบญี่ปุ่นเพื่อผิวที่ยกกระชับ">
+                                Advanced EMS facial treatment combining muscle stimulation with Japanese massage techniques for lifted, toned skin.
                             </p>
                             <button class="book-service" onclick="window.open('https://mitsuba.setmore.com/beta', '_blank')" data-en="Book This Service" data-ja="このサービスを予約" data-th="จองบริการนี้">Book This Service</button>
                         </div>
@@ -1660,7 +1728,7 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="spa-oil-treatment.jpg" alt="MITSUBA RELAX HEADSPA - Organic Oil Treatment" class="gallery-image" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="oil.jpeg" alt="MITSUBA RELAX HEADSPA - Natural Organic Products" class="gallery-image" style="width: 100%; height: 100%; object-fit: cover;">
                     <div class="gallery-overlay">
                         <h3 class="gallery-title" data-en="Natural Ingredients" data-ja="天然成分" data-th="ส่วนผสมจากธรรมชาติ">Natural Ingredients</h3>
                         <p class="gallery-description" data-en="100% organic products for healthy scalp and hair" data-ja="健康な頭皮と髪のための100%オーガニック製品" data-th="ผลิตภัณฑ์ออร์แกนิก 100% เพื่อหนังศีรษะและเส้นผมที่แข็งแรง">
@@ -1669,7 +1737,7 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="AdobeStock_548738802.jpeg" alt="MITSUBA RELAX HEADSPA - Serene Environment" class="gallery-image" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="aroma.jpeg" alt="MITSUBA RELAX HEADSPA - Relaxing Ambiance" class="gallery-image" style="width: 100%; height: 100%; object-fit: cover;">
                     <div class="gallery-overlay">
                         <h3 class="gallery-title" data-en="Serene Environment" data-ja="静かな環境" data-th="สภาพแวดล้อมที่เงียบสงบ">Serene Environment</h3>
                         <p class="gallery-description" data-en="Peaceful atmosphere designed for complete relaxation" data-ja="完全なリラクゼーションのために設計された平和な雰囲気" data-th="บรรยากาศที่สงบเพื่อการผ่อนคลายอย่างสมบูรณ์">
@@ -1745,12 +1813,6 @@
                         <div>
                             <h4 data-en="Contact" data-ja="連絡先" data-th="ติดต่อ">Contact</h4>
                             <p><a href="tel:0646681515" style="color: var(--primary); text-decoration: none; font-weight: 500;">064-668-1515</a></p>
-                            <p><a href="https://wa.me/66646681515" target="_blank" style="color: var(--primary); text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                                </svg>
-                                WhatsApp
-                            </a></p>
                             <p><a href="mailto:mitsubaspa@gmail.com" style="color: var(--primary); text-decoration: none;">mitsubaspa@gmail.com</a></p>
                             <p><a href="https://www.instagram.com/mitsuba.bangkok/" target="_blank">@mitsuba.bangkok</a></p>
                         </div>
@@ -1787,11 +1849,6 @@
                         <li><a href="https://mitsuba.setmore.com/beta" target="_blank" data-en="Book Now" data-ja="予約" data-th="จองตอนนี้">Book Now</a></li>
                         <li><a href="#location" data-en="Location" data-ja="場所" data-th="ที่ตั้ง">Location</a></li>
                         <li><a href="tel:0646681515" style="color: rgba(255, 255, 255, 0.7);">📞 064-668-1515</a></li>
-                        <li><a href="https://wa.me/66646681515" target="_blank" style="color: rgba(255, 255, 255, 0.7); display: inline-flex; align-items: center; gap: 6px;">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="opacity: 0.8;">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                            </svg> WhatsApp
-                        </a></li>
                         <li><a href="mailto:mitsubaspa@gmail.com" style="color: rgba(255, 255, 255, 0.7);">✉️ mitsubaspa@gmail.com</a></li>
                     </ul>
                 </div>
@@ -1804,7 +1861,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2024 MITSUBA RELAX HEADSPA. All rights reserved.</p>
+                <p>© 2025 MITSUBA RELAX HEADSPA. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -1924,6 +1981,46 @@
             if (parallax) {
                 parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
             }
+        });
+
+        // Google Ads Conversion Tracking
+        // Track booking button clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track Setmore booking clicks
+            document.querySelectorAll('a[href*="mitsuba.setmore.com"]').forEach(button => {
+                button.addEventListener('click', function() {
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-17421266988/iimdCM7Ho4UbEKzgjfNA',
+                        'event_callback': function() {
+                            console.log('Conversion tracked: Booking button clicked');
+                        }
+                    });
+                });
+            });
+
+            // Track WhatsApp button clicks
+            document.querySelectorAll('a[href*="wa.me"]').forEach(button => {
+                button.addEventListener('click', function() {
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-17421266988/iimdCM7Ho4UbEKzgjfNA',
+                        'event_callback': function() {
+                            console.log('Conversion tracked: WhatsApp button clicked');
+                        }
+                    });
+                });
+            });
+
+            // Track phone number clicks
+            document.querySelectorAll('a[href^="tel:"]').forEach(button => {
+                button.addEventListener('click', function() {
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-17421266988/iimdCM7Ho4UbEKzgjfNA',
+                        'event_callback': function() {
+                            console.log('Conversion tracked: Phone number clicked');
+                        }
+                    });
+                });
+            });
         });
     </script>
 </body>
