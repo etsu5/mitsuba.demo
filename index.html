@@ -890,6 +890,34 @@
             max-width: 300px;
         }
 
+        .floor-banner {
+            background: linear-gradient(135deg, var(--primary), #8B6914);
+            color: white;
+            text-align: center;
+            padding: 20px 30px;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 30px rgba(139, 105, 20, 0.3);
+            animation: floor-pulse 2.5s ease-in-out infinite;
+        }
+
+        .floor-banner .floor-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 4px;
+        }
+
+        .floor-banner .floor-sub {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        @keyframes floor-pulse {
+            0%, 100% { box-shadow: 0 8px 30px rgba(139, 105, 20, 0.3); }
+            50% { box-shadow: 0 8px 40px rgba(139, 105, 20, 0.55); }
+        }
+
         .location-info h3 {
             font-family: 'Playfair Display', serif;
             font-size: 2rem;
@@ -1754,6 +1782,10 @@
                 <p class="section-subtitle" data-en="FIND US" data-ja="私たちを見つける" data-th="หาเรา">FIND US</p>
                 <h2 class="section-title" data-en="Visit Our Urban Oasis" data-ja="都会のオアシスを訪れる" data-th="เยี่ยมชมโอเอซิสในเมือง">Visit Our Urban Oasis</h2>
             </div>
+            <div class="floor-banner">
+                <div class="floor-number" data-en="We are on the 3rd Floor ▲" data-ja="3階にございます ▲" data-th="เราอยู่ชั้น 3 ▲">We are on the 3rd Floor ▲</div>
+                <div class="floor-sub" data-en="Sukhumvit Soi 33 — Please take the elevator or stairs to the 3rd floor. Can't find us? Call 064-668-1515!" data-ja="スクンビット ソイ33 — エレベーターまたは階段で3階へお越しください。迷ったらお電話ください！064-668-1515" data-th="ซอยสุขุมวิท 33 — กรุณาขึ้นลิฟต์หรือบันไดไปชั้น 3 หาไม่เจอ? โทร 064-668-1515!">Sukhumvit Soi 33 — Please take the elevator or stairs to the 3rd floor. Can't find us? Call 064-668-1515!</div>
+            </div>
             <div class="location-grid">
                 <div class="map-container">
                     <iframe 
@@ -1767,7 +1799,7 @@
                     </iframe>
                     <div class="map-overlay">
                         <h4>MITSUBA RELAX HEADSPA</h4>
-                        <p data-en="Heart of Bangkok" data-ja="バンコクの中心" data-th="ใจกลางกรุงเทพฯ">Heart of Bangkok</p>
+                        <p data-en="3rd Floor — Sukhumvit Soi 33" data-ja="3階 — スクンビット ソイ33" data-th="ชั้น 3 — ซอยสุขุมวิท 33">3rd Floor — Sukhumvit Soi 33</p>
                     </div>
                 </div>
                 <div class="location-info">
@@ -1776,7 +1808,15 @@
                         <div class="info-icon">📍</div>
                         <div>
                             <h4 data-en="Location" data-ja="場所" data-th="ที่ตั้ง">Location</h4>
-                            <p data-en="Central Bangkok, Walking distance from BTS" data-ja="バンコク中心部、BTSから徒歩圏内" data-th="ใจกลางกรุงเทพฯ ใกล้ BTS">Central Bangkok, Walking distance from BTS</p>
+                            <p data-en="8/1 Sukhumvit Soi 33, 3rd Floor, Khlong Tan Nuea, Watthana, Bangkok 10110" data-ja="8/1 スクンビット ソイ33 3階、クロントンヌア、ワッタナー、バンコク 10110" data-th="8/1 ซอยสุขุมวิท 33 ชั้น 3, คลองตันเหนือ, วัฒนา, กรุงเทพฯ 10110">8/1 Sukhumvit Soi 33, 3rd Floor, Khlong Tan Nuea, Watthana, Bangkok 10110</p>
+                            <p style="margin-top: 10px; display: inline-block; background: var(--primary); color: white; padding: 6px 16px; border-radius: 20px; font-weight: 700; font-size: 0.95rem;" data-en="▲ 3rd Floor" data-ja="▲ 3階" data-th="▲ ชั้น 3">▲ 3rd Floor</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">🚆</div>
+                        <div>
+                            <h4 data-en="Nearest Station" data-ja="最寄り駅" data-th="สถานีที่ใกล้ที่สุด">Nearest Station</h4>
+                            <p data-en="BTS Phrom Phong — 6 min walk" data-ja="BTS プロンポン駅 — 徒歩6分" data-th="BTS พร้อมพงษ์ — เดิน 6 นาที">BTS Phrom Phong — 6 min walk</p>
                         </div>
                     </div>
                     <div class="info-item">
@@ -1792,6 +1832,7 @@
                         <div>
                             <h4 data-en="Contact" data-ja="連絡先" data-th="ติดต่อ">Contact</h4>
                             <p><a href="tel:0646681515" style="color: var(--primary); text-decoration: none; font-weight: 500;">064-668-1515</a></p>
+                            <p style="margin-top: 4px; font-size: 0.9rem;" data-en="Can't find us? Call us and we'll guide you!" data-ja="迷ったらお気軽にお電話ください！ご案内します" data-th="หาไม่เจอ? โทรหาเราได้เลย เราจะบอกทาง!">Can't find us? Call us and we'll guide you!</p>
                             <p><a href="mailto:mitsubaspa@gmail.com" style="color: var(--primary); text-decoration: none;">mitsubaspa@gmail.com</a></p>
                             <p><a href="https://www.instagram.com/mitsuba.bangkok/" target="_blank">@mitsuba.bangkok</a></p>
                         </div>
