@@ -9,6 +9,12 @@
       gtag('js', new Date());
       
       gtag('config', 'AW-17421266988');
+
+      // Google Analytics 4: set the measurement ID (G-XXXXXXXXXX) to enable
+      window.GA4_MEASUREMENT_ID = '';
+      if (window.GA4_MEASUREMENT_ID) {
+        gtag('config', window.GA4_MEASUREMENT_ID);
+      }
     </script>
     
     <meta charset="UTF-8">
@@ -2046,6 +2052,7 @@
             });
             
             localStorage.setItem('preferredLanguage', lang);
+            document.documentElement.lang = lang;
         }
         
         langButtons.forEach(btn => {
@@ -2100,45 +2107,49 @@
             }
         });
 
-        // Google Ads Conversion Tracking
-        // Track booking button clicks
-        document.addEventListener('DOMContentLoaded', function() {
-            // Track Setmore booking clicks
-            document.querySelectorAll('a[href*="mitsuba.setmore.com"]').forEach(button => {
-                button.addEventListener('click', function() {
-                    gtag('event', 'conversion', {
-                        'send_to': 'AW-17421266988/iimdCM7Ho4UbEKzgjfNA',
-                        'event_callback': function() {
-                            console.log('Conversion tracked: Booking button clicked');
-                        }
-                    });
-                });
-            });
+        // Conversion & engagement tracking (Google Ads + GA4)
+        // Uses event delegation so every booking control is covered,
+        // including the "Book This Service" <button> elements.
+        (function() {
+            var ADS_CONVERSION = 'AW-17421266988/iimdCM7Ho4UbEKzgjfNA';
 
-            // Track WhatsApp button clicks
-            document.querySelectorAll('a[href*="wa.me"]').forEach(button => {
-                button.addEventListener('click', function() {
-                    gtag('event', 'conversion', {
-                        'send_to': 'AW-17421266988/iimdCM7Ho4UbEKzgjfNA',
-                        'event_callback': function() {
-                            console.log('Conversion tracked: WhatsApp button clicked');
-                        }
-                    });
-                });
-            });
+            function classify(el) {
+                var a = el.closest('a[href], button.book-service');
+                if (!a) return null;
+                var href = a.getAttribute('href') || '';
+                if (a.matches('button.book-service') || href.indexOf('mitsuba.setmore.com') !== -1) return { type: 'booking', ads: true };
+                if (href.indexOf('wa.me') !== -1) return { type: 'whatsapp', ads: true };
+                if (href.indexOf('tel:') === 0) return { type: 'phone', ads: true };
+                if (href.indexOf('mailto:') === 0) return { type: 'email', ads: false };
+                if (href.indexOf('instagram.com') !== -1) return { type: 'instagram', ads: false };
+                if (href.indexOf('maps.app.goo.gl') !== -1 || href.indexOf('google.com/maps') !== -1) return { type: 'map', ads: false };
+                return null;
+            }
 
-            // Track phone number clicks
-            document.querySelectorAll('a[href^="tel:"]').forEach(button => {
-                button.addEventListener('click', function() {
+            document.addEventListener('click', function(e) {
+                var hit = classify(e.target);
+                if (!hit || typeof gtag !== 'function') return;
+                var lang = localStorage.getItem('preferredLanguage') || document.documentElement.lang || 'en';
+
+                if (hit.ads) {
                     gtag('event', 'conversion', {
-                        'send_to': 'AW-17421266988/iimdCM7Ho4UbEKzgjfNA',
+                        'send_to': ADS_CONVERSION,
                         'event_callback': function() {
-                            console.log('Conversion tracked: Phone number clicked');
+                            console.log('Conversion tracked: ' + hit.type);
                         }
                     });
-                });
-            });
-        });
+                }
+                if (window.GA4_MEASUREMENT_ID) {
+                    gtag('event', hit.type + '_click', {
+                        'event_category': 'engagement',
+                        'language': lang
+                    });
+                    if (hit.ads) {
+                        gtag('event', 'generate_lead', { 'method': hit.type, 'language': lang });
+                    }
+                }
+            }, true);
+        })();
     </script>
 </body>
 </html>
