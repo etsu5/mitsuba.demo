@@ -146,7 +146,7 @@
         .hero {
             position: relative; color: var(--cream); padding: 0;
             background: var(--green) url('img/hero.jpg') center/cover no-repeat;
-            min-height: 78vh; display: flex; align-items: flex-end;
+            min-height: min(78vh, 720px); display: flex; align-items: flex-end;
         }
         .hero::before {
             content: ''; position: absolute; inset: 0;
@@ -506,7 +506,7 @@
         <div class="cta-row" style="max-width:560px;margin:0 auto">
             <a class="btn btn-line cta-line" href="https://line.me/R/ti/p/@145zdnzj" target="_blank" rel="noopener"><span data-en="Book on LINE" data-ja="LINEで予約する" data-th="จองผ่าน LINE">Book on LINE</span></a>
             <a class="btn btn-gold cta-online" href="https://mitsuba.setmore.com/beta" target="_blank" rel="noopener"><span data-en="Book online" data-ja="オンラインで予約" data-th="จองออนไลน์">Book online</span></a>
-            <a class="btn btn-outline" href="tel:+66646681515" style="flex-basis:100%"><span data-en="Call 064-668-1515" data-ja="電話 064-668-1515" data-th="โทร 064-668-1515">Call 064-668-1515</span></a>
+            <a class="btn btn-outline" href="tel:+66646681515" style="flex-basis:100%;order:3"><span data-en="Call 064-668-1515" data-ja="電話 064-668-1515" data-th="โทร 064-668-1515">Call 064-668-1515</span></a>
         </div>
     </div>
 </section>
