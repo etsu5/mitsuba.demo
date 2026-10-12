@@ -115,7 +115,7 @@
         .cta-wa { display: none; }
         html[data-lang="en"] .cta-wa { display: inline-flex; }
         html[data-lang="en"] .cta-line { display: none; }
-        .cta-row .cta-wa, .sticky .cta-wa { order: 2; }
+        .cta-row .cta-wa, .sticky .cta-wa { order: 1; }
         .btn-outline { background: transparent; color: var(--cream); border-color: rgba(245,241,232,.6); }
         .btn-outline:hover { border-color: var(--cream); }
         .btn-outline.dark { color: var(--green); border-color: var(--green); }
@@ -126,8 +126,7 @@
         /* Language-dependent primary CTA ordering */
         .cta-row .cta-line { order: 1; }
         .cta-row .cta-online { order: 2; }
-        html[data-lang="en"] .cta-row .cta-line { order: 2; }
-        html[data-lang="en"] .cta-row .cta-online { order: 1; }
+        html[data-lang="en"] .cta-row .cta-online { order: 2; }
 
         /* Header */
         header {
@@ -260,8 +259,7 @@
         .sticky .btn { padding: 10px 12px; font-size: 14px; min-height: 44px; }
         .sticky .btn-call { background: transparent; color: var(--cream); border-color: rgba(245,241,232,.5); padding: 10px 14px; }
         .sticky .cta-line { order: 1; } .sticky .cta-online { order: 2; } .sticky .btn-call { order: 3; }
-        html[data-lang="en"] .sticky .cta-line { order: 2; }
-        html[data-lang="en"] .sticky .cta-online { order: 1; }
+        html[data-lang="en"] .sticky .cta-online { order: 2; }
         @media (min-width: 860px) { .sticky { display: none; } body { padding-bottom: 0; } }
 
         .ig { text-align: center; padding: 40px 0; background: var(--cream); border-top: 1px solid var(--cream-2); }
