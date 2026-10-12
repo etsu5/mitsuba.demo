@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitsuba Site Preview</title>
+    <meta name="description" content="Japanese-style head spa in your own semi-private room near BTS Phrom Phong. Head spa from ฿590, EMS scalp treatment and facial massage. Book on LINE or online.">
+    <meta name="theme-color" content="#243224">
+
+    <meta property="og:title" content="Mitsuba Head Spa Bangkok – Japanese Head Spa, Sukhumvit 33">
+    <meta property="og:description" content="Japanese head spa in your own semi-private room, 6 min from BTS Phrom Phong. From ฿590. Book on LINE or online.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mitsubaspa.com/">
+    <meta property="og:image" content="https://www.mitsubaspa.com/img/og.jpg">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:locale:alternate" content="th_TH">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HealthAndBeautyBusiness",
+      "name": "Mitsuba Head Spa",
+      "image": "https://www.mitsubaspa.com/img/og.jpg",
+      "url": "https://www.mitsubaspa.com/",
+      "telephone": "+66646681515",
+      "email": "mitsubaspa@gmail.com",
+      "priceRange": "฿590 - ฿2190",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "8/1 Sukhumvit Soi 33, 3rd Floor",
+        "addressLocality": "Khlong Tan Nuea, Watthana",
+        "addressRegion": "Bangkok",
+        "postalCode": "10110",
+        "addressCountry": "TH"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 13.7336, "longitude": 100.5675 },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Thursday","Friday","Saturday","Sunday"], "opens": "10:00", "closes": "19:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "10:00", "closes": "17:00" }
+      ],
+      "sameAs": ["https://www.instagram.com/mitsuba.bangkok/"]
+    }
+    </script>
+
+    <style>
+        :root {
+            --green: #243224;
+            --green-2: #2f4a2c;
+            --gold: #c9a962;
+            --gold-light: #d9c08a;
+            --cream: #f5f1e8;
+            --cream-2: #ece6d8;
+            --sage: #a8b598;
+            --sage-dark: #6f8a5e;
+            --grey: #6d7263;
+            --ink: #1f261f;
+            --serif: 'Cormorant Garamond', Georgia, serif;
+            --sans: 'Noto Sans JP', 'Noto Sans Thai', -apple-system, 'Segoe UI', sans-serif;
+            --gutter: 20px;
+            --max: 1080px;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        body {
+            font-family: var(--sans);
+            color: var(--ink);
+            background: var(--cream);
+            line-height: 1.7;
+            font-size: 16px;
+            padding-bottom: 72px; /* room for sticky bar */
+        }
+        img { display: block; max-width: 100%; height: auto; }
+        a { color: inherit; }
+        .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+        section { padding: 56px 0; }
+        h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.2; }
+        h2 { font-size: clamp(28px, 5vw, 40px); color: var(--green); margin-bottom: 8px; }
+        .eyebrow { font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: var(--sage-dark); margin-bottom: 10px; font-weight: 500; }
+        .lead { color: var(--grey); max-width: 640px; margin-bottom: 28px; }
+        .center { text-align: center; }
+        .center .lead { margin-left: auto; margin-right: auto; }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            padding: 14px 24px; border-radius: 999px; font-weight: 500; text-decoration: none;
+            font-size: 15px; border: 1.5px solid transparent; transition: background .2s, color .2s, border-color .2s;
+            min-height: 48px;
+        }
+        .btn-gold { background: var(--gold); color: var(--green); border-color: var(--gold); }
+        .btn-gold:hover { background: var(--gold-light); border-color: var(--gold-light); }
+        .btn-line { background: #06C755; color: #fff; border-color: #06C755; }
+        .btn-line:hover { background: #05b04b; }
+        .btn-wa { background: #25D366; color: #fff; border-color: #25D366; }
+        .btn-wa:hover { background: #1fbf5b; }
+        /* WhatsApp replaces LINE for English visitors */
+        .cta-wa { display: none; }
+        html[data-lang="en"] .cta-wa { display: inline-flex; }
+        html[data-lang="en"] .cta-line { display: none; }
+        .cta-row .cta-wa, .sticky .cta-wa { order: 1; }
+        .btn-outline { background: transparent; color: var(--cream); border-color: rgba(245,241,232,.6); }
+        .btn-outline:hover { border-color: var(--cream); }
+        .btn-outline.dark { color: var(--green); border-color: var(--green); }
+        .btn-outline.dark:hover { background: var(--green); color: var(--cream); }
+        .btn svg { width: 18px; height: 18px; flex: none; }
+        .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+        .cta-row .btn { flex: 1 1 200px; }
+        /* Language-dependent primary CTA ordering */
+        .cta-row .cta-line { order: 1; }
+        .cta-row .cta-online { order: 2; }
+        html[data-lang="en"] .cta-row .cta-online { order: 2; }
+
+        /* Header */
+        header {
+            position: sticky; top: 0; z-index: 50;
+            background: rgba(36,50,36,.96); backdrop-filter: blur(8px);
+            color: var(--cream); border-bottom: 1px solid rgba(201,169,98,.25);
+        }
+        .nav { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 12px; }
+        .brand { font-family: var(--serif); font-size: 22px; letter-spacing: .14em; color: var(--gold); text-decoration: none; font-weight: 600; white-space: nowrap; }
+        .brand small { display: block; font-family: var(--sans); font-size: 9px; letter-spacing: .3em; color: var(--sage); font-weight: 400; margin-top: -4px; }
+        .nav-links { display: none; gap: 24px; font-size: 14px; }
+        .nav-links a { text-decoration: none; color: var(--cream-2); opacity: .85; }
+        .nav-links a:hover { opacity: 1; color: var(--gold-light); }
+        .lang { display: flex; gap: 4px; background: rgba(0,0,0,.25); border-radius: 999px; padding: 3px; }
+        .lang button {
+            background: none; border: 0; color: var(--cream-2); font-family: var(--sans); font-size: 12px;
+            padding: 6px 10px; border-radius: 999px; cursor: pointer; min-height: 30px;
+        }
+        .lang button.active { background: var(--gold); color: var(--green); font-weight: 500; }
+        @media (min-width: 860px) { .nav-links { display: flex; } }
+
+        /* Hero */
+        .hero {
+            position: relative; color: var(--cream); padding: 0;
+            background: var(--green) url('img/hero.jpg') center/cover no-repeat;
+            min-height: min(78vh, 720px); display: flex; align-items: flex-end;
+        }
+        .hero::before {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(180deg, rgba(36,50,36,.25) 0%, rgba(36,50,36,.55) 55%, rgba(36,50,36,.92) 100%);
+        }
+        .hero .wrap { position: relative; padding-top: 80px; padding-bottom: 48px; width: 100%; }
+        .hero .eyebrow { color: var(--gold); }
+        .hero h1 { font-size: clamp(34px, 7vw, 60px); margin-bottom: 14px; max-width: 760px; }
+        .hero p { max-width: 560px; color: var(--cream-2); margin-bottom: 26px; font-size: 17px; }
+        .hero-facts { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 13px; color: var(--sage); margin-bottom: 26px; }
+        .hero-facts span::before { content: '◆'; color: var(--gold); font-size: 8px; margin-right: 8px; vertical-align: 2px; }
+        .hero .cta-row { max-width: 560px; }
+
+        /* Why */
+        .why { background: var(--cream); }
+        .grid3 { display: grid; gap: 18px; grid-template-columns: 1fr; }
+        @media (min-width: 720px) { .grid3 { grid-template-columns: repeat(3, 1fr); } }
+        .card { background: #fff; border: 1px solid var(--cream-2); border-radius: 14px; padding: 26px 22px; }
+        .card .icon { width: 44px; height: 44px; border-radius: 50%; background: var(--green); color: var(--gold); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+        .card .icon svg { width: 22px; height: 22px; }
+        .card h3 { font-size: 24px; color: var(--green); margin-bottom: 8px; }
+        .card p { color: var(--grey); font-size: 15px; }
+        .card-photo img { width: calc(100% + 44px); margin: -26px -22px 18px; max-width: none; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 14px 14px 0 0; }
+
+        /* Campaign */
+        .promo { background: var(--green); color: var(--cream); padding: 44px 0; }
+        .promo-box {
+            border: 1px solid var(--gold); border-radius: 16px; padding: 28px 24px;
+            display: grid; gap: 18px; grid-template-columns: 1fr; align-items: center;
+        }
+        @media (min-width: 760px) { .promo-box { grid-template-columns: 1fr auto; } }
+        .promo .eyebrow { color: var(--gold); }
+        .promo h2 { color: var(--cream); margin-bottom: 6px; }
+        .promo p { color: var(--sage); font-size: 15px; }
+        .promo .price { font-family: var(--serif); font-size: 40px; color: var(--gold-light); line-height: 1; }
+        .promo .price small { font-size: 16px; color: var(--sage); font-family: var(--sans); margin-left: 6px; }
+
+        /* Menu */
+        .menu { background: var(--cream-2); }
+        .menu-group { margin-top: 28px; }
+        .menu-group h3 { font-size: 22px; color: var(--sage-dark); margin-bottom: 12px; letter-spacing: .06em; }
+        .item {
+            background: #fff; border-radius: 12px; padding: 18px 20px; margin-bottom: 10px;
+            display: grid; grid-template-columns: 1fr auto; gap: 6px 16px; align-items: center;
+        }
+        .item .name { font-weight: 500; color: var(--green); font-size: 17px; }
+        .item .desc { grid-column: 1 / -1; color: var(--grey); font-size: 14px; }
+        .item .meta { text-align: right; white-space: nowrap; }
+        .item .min { font-size: 12px; color: var(--sage-dark); display: block; }
+        .item .price { font-family: var(--serif); font-size: 26px; color: var(--green); line-height: 1.1; }
+        .item.featured { border: 1.5px solid var(--gold); }
+        .item .tag { display: inline-block; font-size: 11px; background: var(--gold); color: var(--green); border-radius: 999px; padding: 2px 10px; margin-left: 8px; vertical-align: 2px; font-weight: 500; }
+        .menu-cta { margin-top: 24px; }
+        .note { font-size: 13px; color: var(--grey); margin-top: 14px; }
+
+        /* Reviews */
+        .reviews { background: var(--cream); }
+        .review-box { background: #fff; border-radius: 14px; padding: 28px 22px; border: 1px solid var(--cream-2); }
+        .stars { color: var(--gold); letter-spacing: 4px; font-size: 20px; margin-bottom: 8px; }
+
+        /* Flow */
+        .flow { background: var(--green); color: var(--cream); }
+        .flow h2 { color: var(--cream); }
+        .flow .lead { color: var(--sage); }
+        .steps { display: grid; gap: 14px; grid-template-columns: 1fr; counter-reset: step; }
+        @media (min-width: 720px) { .steps { grid-template-columns: repeat(5, 1fr); } }
+        .step { background: rgba(255,255,255,.05); border: 1px solid rgba(201,169,98,.3); border-radius: 12px; padding: 18px; }
+        .step::before { counter-increment: step; content: counter(step, decimal-leading-zero); font-family: var(--serif); color: var(--gold); font-size: 26px; display: block; margin-bottom: 6px; }
+        .step strong { display: block; margin-bottom: 4px; font-weight: 500; }
+        .step span { font-size: 14px; color: var(--sage); }
+
+        /* FAQ */
+        .faq { background: var(--cream); }
+        details { background: #fff; border-radius: 10px; border: 1px solid var(--cream-2); margin-bottom: 8px; }
+        summary { cursor: pointer; padding: 16px 44px 16px 18px; font-weight: 500; color: var(--green); position: relative; list-style: none; }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: '+'; position: absolute; right: 18px; top: 14px; color: var(--gold); font-size: 22px; font-family: var(--serif); }
+        details[open] summary::after { content: '−'; }
+        details p { padding: 0 18px 16px; color: var(--grey); font-size: 15px; }
+
+        /* Access */
+        .access { background: var(--cream-2); }
+        .access-grid { display: grid; gap: 24px; grid-template-columns: 1fr; }
+        @media (min-width: 800px) { .access-grid { grid-template-columns: 1fr 1fr; align-items: start; } }
+        .access dl { display: grid; grid-template-columns: auto 1fr; gap: 10px 16px; font-size: 15px; }
+        .access dt { color: var(--sage-dark); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; padding-top: 3px; }
+        .access dd { color: var(--ink); }
+        .floor { background: var(--green); color: var(--cream); border-radius: 12px; padding: 16px 18px; margin: 18px 0; font-size: 15px; border-left: 4px solid var(--gold); }
+        .map { border-radius: 14px; overflow: hidden; aspect-ratio: 4 / 3; background: var(--sage); }
+        .map iframe { width: 100%; height: 100%; border: 0; }
+
+        /* Footer */
+        footer { background: var(--ink); color: var(--sage); padding: 36px 0 28px; font-size: 13px; }
+        footer .brand { display: inline-block; margin-bottom: 10px; }
+        footer .links { display: flex; flex-wrap: wrap; gap: 16px; margin: 12px 0 18px; }
+        footer .links a { text-decoration: none; color: var(--cream-2); }
+
+        /* Sticky bar (mobile) */
+        .sticky {
+            position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+            background: rgba(36,50,36,.97); border-top: 1px solid rgba(201,169,98,.3);
+            padding: 10px var(--gutter) calc(10px + env(safe-area-inset-bottom));
+            display: grid; grid-template-columns: 1fr 1fr auto; gap: 8px;
+        }
+        .sticky .btn { padding: 10px 12px; font-size: 14px; min-height: 44px; }
+        .sticky .btn-call { background: transparent; color: var(--cream); border-color: rgba(245,241,232,.5); padding: 10px 14px; }
+        .sticky .cta-line { order: 1; } .sticky .cta-online { order: 2; } .sticky .btn-call { order: 3; }
+        html[data-lang="en"] .sticky .cta-online { order: 2; }
+        @media (min-width: 860px) { .sticky { display: none; } body { padding-bottom: 0; } }
+
+        .ig { text-align: center; padding: 40px 0; background: var(--cream); border-top: 1px solid var(--cream-2); }
+        .ig a { color: var(--green); font-weight: 500; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<div style="background:#c9a962;color:#243224;text-align:center;font:500 13px/1.4 'Noto Sans JP',sans-serif;padding:8px 12px">PREVIEW / プレビュー版・未公開 / ตัวอย่าง ยังไม่เผยแพร่</div>
+<header>
+    <div class="wrap nav">
+        <a href="#top" class="brand">MITSUBA<small>HEAD SPA · BANGKOK</small></a>
+        <nav class="nav-links">
+            <a href="#menu" data-en="Menu &amp; Prices" data-ja="メニュー・料金" data-th="เมนูและราคา">Menu &amp; Prices</a>
+            <a href="#flow" data-en="Your Visit" data-ja="ご来店の流れ" data-th="ขั้นตอนการใช้บริการ">Your Visit</a>
+            <a href="#faq" data-en="FAQ" data-ja="よくある質問" data-th="คำถามที่พบบ่อย">FAQ</a>
+            <a href="#access" data-en="Access" data-ja="アクセス" data-th="การเดินทาง">Access</a>
+            <a href="#book" data-en="Book" data-ja="予約" data-th="จอง">Book</a>
+        </nav>
+        <div class="lang" role="group" aria-label="Language">
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="ja">日本語</button>
+            <button class="lang-btn" data-lang="th">ไทย</button>
+        </div>
+    </div>
+</header>
+
+<section class="hero" id="top">
+    <div class="wrap">
+        <div class="eyebrow" data-en="Japanese Head Spa · Sukhumvit 33" data-ja="日本式ヘッドスパ · スクンビット33" data-th="เฮดสปาสไตล์ญี่ปุ่น · สุขุมวิท 33">Japanese Head Spa · Sukhumvit 33</div>
+        <h1 data-en="Quiet Japanese head spa in your own room, 6 minutes from BTS Phrom Phong" data-ja="静かな半個室で受ける、日本式ヘッドスパ。BTSプロンポン駅から徒歩6分" data-th="เฮดสปาแบบญี่ปุ่นในห้องกึ่งส่วนตัว เงียบสงบ เดิน 6 นาทีจาก BTS พร้อมพงษ์">Quiet Japanese head spa in your own room, 6 minutes from BTS Phrom Phong</h1>
+        <p data-en="Japanese scalp care techniques, one guest per room, no rush. Courses from 30 to 90 minutes, starting at ฿590." data-ja="日本のヘッドスパ技術を、一人ひとつの半個室で。30分から90分のコース、590バーツから。" data-th="เทคนิคดูแลหนังศีรษะแบบญี่ปุ่น ห้องกึ่งส่วนตัวสำหรับคุณคนเดียว ไม่เร่งรีบ คอร์ส 30–90 นาที เริ่มต้น 590 บาท">Japanese scalp care techniques, one guest per room, no rush. Courses from 30 to 90 minutes, starting at ฿590.</p>
+        <div class="hero-facts">
+            <span data-en="Semi-private rooms" data-ja="半個室" data-th="ห้องกึ่งส่วนตัว">Semi-private rooms</span>
+            <span data-en="Women &amp; men welcome" data-ja="女性・男性どちらも歓迎" data-th="ยินดีต้อนรับทั้งหญิงและชาย">Women &amp; men welcome</span>
+            <span data-en="Open 10:00–19:00, closed Wed" data-ja="10:00–19:00 · 水曜定休" data-th="เปิด 10:00–19:00 · หยุดวันพุธ">Open 10:00–19:00, closed Wed</span>
+        </div>
+        <div class="cta-row">
+            <a class="btn btn-line cta-line" href="https://line.me/R/ti/p/@145zdnzj" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.6 7.4 8.4 8.1.3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.6 1.1-.5 5.8-3.4 7.9-5.8C21.4 13.9 22 12.1 22 10.2 22 5.7 17.5 2 12 2zm-3.6 10.7H6.1c-.3 0-.5-.2-.5-.5V7.9c0-.3.2-.5.5-.5s.5.2.5.5v3.8h1.8c.3 0 .5.2.5.5s-.2.5-.5.5zm1.9-.5c0 .3-.2.5-.5.5s-.5-.2-.5-.5V7.9c0-.3.2-.5.5-.5s.5.2.5.5v4.3zm5 0c0 .2-.1.4-.3.5h-.2c-.2 0-.3-.1-.4-.2l-2.2-3v2.7c0 .3-.2.5-.5.5s-.5-.2-.5-.5V7.9c0-.2.1-.4.3-.5h.2c.2 0 .3.1.4.2l2.2 3V7.9c0-.3.2-.5.5-.5s.5.2.5.5v4.3zm3.5-2.6c.3 0 .5.2.5.5s-.2.5-.5.5h-1.8v1.1h1.8c.3 0 .5.2.5.5s-.2.5-.5.5h-2.3c-.3 0-.5-.2-.5-.5V7.9c0-.3.2-.5.5-.5h2.3c.3 0 .5.2.5.5s-.2.5-.5.5h-1.8v1.2h1.8z"/></svg>
+                <span data-en="Book on LINE" data-ja="LINEで予約する" data-th="จองผ่าน LINE">Book on LINE</span>
+            </a>
+            <a class="btn btn-wa cta-wa" href="https://wa.me/66646681515" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8zm-3 4.4c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.2 2.4.9 2.9.8 3.4.7.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3l-1.9-.9c-.3-.1-.4-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.6l.4-.5.3-.5v-.5l-.9-2.1c-.2-.5-.4-.4-.6-.4z"/></svg><span>WhatsApp</span></a>
+                <a class="btn btn-gold cta-online" href="https://mitsuba.setmore.com/beta" target="_blank" rel="noopener">
+                <span data-en="Book online" data-ja="オンラインで予約" data-th="จองออนไลน์">Book online</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="why">
+    <div class="wrap">
+        <div class="eyebrow" data-en="Why Mitsuba" data-ja="Mitsubaが選ばれる理由" data-th="ทำไมต้อง Mitsuba">Why Mitsuba</div>
+        <h2 data-en="A head spa the way it is done in Japan" data-ja="日本のヘッドスパを、そのままバンコクで" data-th="เฮดสปาแบบที่ทำกันในญี่ปุ่น">A head spa the way it is done in Japan</h2>
+        <p class="lead" data-en="Most head spas in Bangkok are open rooms with several beds. Mitsuba is different." data-ja="バンコクの多くのヘッドスパは、ベッドが並ぶ共有スペースです。Mitsubaは違います。" data-th="เฮดสปาส่วนใหญ่ในกรุงเทพฯ เป็นห้องรวมที่มีหลายเตียง แต่ Mitsuba ไม่เหมือนที่อื่น">Most head spas in Bangkok are open rooms with several beds. Mitsuba is different.</p>
+        <div class="grid3">
+            <div class="card card-photo">
+                <img src="img/room.jpg" width="1400" height="875" loading="lazy" alt="Private treatment room at Mitsuba Head Spa">
+                <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 21V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16M4 21h16M9 21v-6h6v6"/></svg></div>
+                <h3 data-en="Your own room" data-ja="一人ひとつの半個室" data-th="ห้องกึ่งส่วนตัวสำหรับคุณคนเดียว">Your own room</h3>
+                <p data-en="One guest per room, separated by walls and a curtain. No rows of beds, no one next to you. Just rest." data-ja="壁とカーテンで仕切られた、お一人ずつの半個室。ベッドが並ぶ共有スペースではなく、隣に人はいません。ただ休む時間です。" data-th="หนึ่งห้องต่อหนึ่งท่าน กั้นด้วยผนังและม่าน ไม่ใช่เตียงเรียงกัน ไม่มีใครอยู่ข้างๆ แค่พักผ่อน">One guest per room, separated by walls and a curtain. No rows of beds, no one next to you. Just rest.</p>
+            </div>
+            <div class="card card-photo">
+                <img src="img/technique.jpg" width="1400" height="875" loading="lazy" alt="Scalp massage during a head spa treatment">
+                <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+                <h3 data-en="Japanese technique" data-ja="日本式の施術" data-th="เทคนิคแบบญี่ปุ่น">Japanese technique</h3>
+                <p data-en="Scalp cleansing, pressure-point massage and treatment, in the order and rhythm of a Japanese salon. Trained under Japanese management." data-ja="頭皮洗浄・指圧・トリートメントを、日本のサロンの順序とリズムで。日本人オーナーのもとで研修を受けたスタッフが担当します。" data-th="ทำความสะอาดหนังศีรษะ นวดกดจุด และทรีตเมนต์ ตามลำดับและจังหวะแบบซาลอนญี่ปุ่น พนักงานผ่านการฝึกภายใต้การบริหารของคนญี่ปุ่น">Scalp cleansing, pressure-point massage and treatment, in the order and rhythm of a Japanese salon. Trained under Japanese management.</p>
+            </div>
+            <div class="card card-photo">
+                <img src="img/access.jpg" width="1400" height="875" loading="lazy" alt="BTS Phrom Phong station sign">
+                <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+                <h3 data-en="Easy to reach" data-ja="駅から近い" data-th="เดินทางสะดวก">Easy to reach</h3>
+                <p data-en="Sukhumvit Soi 33, 3rd floor. A 6-minute walk from BTS Phrom Phong, near EmQuartier." data-ja="スクンビット・ソイ33の3階。BTSプロンポン駅から徒歩6分、エムクオーティエのすぐ近くです。" data-th="สุขุมวิท ซอย 33 ชั้น 3 เดิน 6 นาทีจาก BTS พร้อมพงษ์ ใกล้ EmQuartier">Sukhumvit Soi 33, 3rd floor. A 6-minute walk from BTS Phrom Phong, near EmQuartier.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="promo" id="promo">
+    <div class="wrap">
+        <div class="promo-box">
+            <div>
+                <div class="eyebrow" data-en="This month" data-ja="今月のおすすめ" data-th="โปรโมชั่นเดือนนี้">This month</div>
+                <h2 data-en="Women's EMS Scalp Spa 70 min + free facial massage" data-ja="女性向けEMSスカルプスパ70分 ＋ フェイシャルマッサージ無料" data-th="EMS สปาหนังศีรษะสำหรับผู้หญิง 70 นาที + นวดหน้าฟรี">Women's EMS Scalp Spa 70 min + free facial massage</h2>
+                <p data-en="EMS scalp treatment, deep cleansing and hair care, with a facial massage added at no charge. Mention this offer when you book." data-ja="EMS頭皮トリートメント・ディープクレンジング・ヘアケアに、フェイシャルマッサージを無料で追加。ご予約時にこのページを見たとお伝えください。" data-th="ทรีตเมนต์หนังศีรษะ EMS ทำความสะอาดล้ำลึก และดูแลเส้นผม พร้อมนวดหน้าฟรี แจ้งโปรโมชั่นนี้ตอนจอง">EMS scalp treatment, deep cleansing and hair care, with a facial massage added at no charge. Mention this offer when you book.</p>
+            </div>
+            <div>
+                <div class="price">฿2,190<small>/ 70 min</small></div>
+                <div class="cta-row" style="margin-top:14px">
+                    <a class="btn btn-line cta-line" href="https://line.me/R/ti/p/@145zdnzj" target="_blank" rel="noopener"><span data-en="Book on LINE" data-ja="LINEで予約" data-th="จองผ่าน LINE">Book on LINE</span></a>
+                    <a class="btn btn-wa cta-wa" href="https://wa.me/66646681515" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8zm-3 4.4c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.2 2.4.9 2.9.8 3.4.7.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3l-1.9-.9c-.3-.1-.4-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.6l.4-.5.3-.5v-.5l-.9-2.1c-.2-.5-.4-.4-.6-.4z"/></svg><span>WhatsApp</span></a>
+                <a class="btn btn-gold cta-online" href="https://mitsuba.setmore.com/beta" target="_blank" rel="noopener"><span data-en="Book online" data-ja="オンライン予約" data-th="จองออนไลน์">Book online</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="menu" id="menu">
+    <div class="wrap">
+        <div class="eyebrow" data-en="Menu &amp; Prices" data-ja="メニュー・料金" data-th="เมนูและราคา">Menu &amp; Prices</div>
+        <h2 data-en="Choose your time" data-ja="時間で選ぶ" data-th="เลือกตามเวลาที่คุณมี">Choose your time</h2>
+        <p class="lead" data-en="All prices in Thai baht, including everything. No tipping expected." data-ja="料金はすべてタイバーツ・総額表示です。チップは不要です。" data-th="ราคาเป็นเงินบาท รวมทุกอย่างแล้ว ไม่ต้องให้ทิป">All prices in Thai baht, including everything. No tipping expected.</p>
+
+        <div class="menu-group">
+            <h3 data-en="Head Spa" data-ja="ヘッドスパ" data-th="เฮดสปา">Head Spa</h3>
+            <div class="item">
+                <div class="name" data-en="Short Trial" data-ja="ショートトライアル" data-th="ทดลองระยะสั้น">Short Trial</div>
+                <div class="meta"><span class="min">30 min</span><span class="price">฿590</span></div>
+                <div class="desc" data-en="First time? Scalp cleansing and a relaxing head massage. A good way to try us." data-ja="はじめての方に。頭皮洗浄とリラックスヘッドマッサージ。まず試してみたい方へ。" data-th="ครั้งแรก? ทำความสะอาดหนังศีรษะและนวดศีรษะผ่อนคลาย เหมาะสำหรับลองใช้บริการ">First time? Scalp cleansing and a relaxing head massage. A good way to try us.</div>
+            </div>
+            <div class="item">
+                <div class="name" data-en="Tired Relief" data-ja="疲労回復コース" data-th="บรรเทาความเหนื่อยล้า">Tired Relief</div>
+                <div class="meta"><span class="min">45 min</span><span class="price">฿990</span></div>
+                <div class="desc" data-en="Head spa with neck and shoulder work, for screen fatigue and tension." data-ja="ヘッドスパに首・肩のケアを加えたコース。目の疲れや肩こりに。" data-th="เฮดสปาพร้อมนวดคอและไหล่ สำหรับความเมื่อยล้าจากหน้าจอและความตึงเครียด">Head spa with neck and shoulder work, for screen fatigue and tension.</div>
+            </div>
+            <div class="item">
+                <div class="name" data-en="Meditation Relax" data-ja="瞑想リラックス" data-th="ผ่อนคลายด้วยการทำสมาธิ">Meditation Relax</div>
+                <div class="meta"><span class="min">70 min</span><span class="price">฿1,390</span></div>
+                <div class="desc" data-en="Our standard full course: scalp cleansing, treatment and an unhurried head, neck and shoulder massage." data-ja="標準のフルコース。頭皮洗浄・トリートメント・ゆっくりとした頭・首・肩のマッサージ。" data-th="คอร์สเต็มมาตรฐาน: ทำความสะอาดหนังศีรษะ ทรีตเมนต์ และนวดศีรษะ คอ ไหล่อย่างไม่เร่งรีบ">Our standard full course: scalp cleansing, treatment and an unhurried head, neck and shoulder massage.</div>
+            </div>
+            <div class="item">
+                <div class="name" data-en="Deep Sleep" data-ja="ディープスリープ" data-th="นอนหลับลึก">Deep Sleep</div>
+                <div class="meta"><span class="min">90 min</span><span class="price">฿1,890</span></div>
+                <div class="desc" data-en="The longest course. Most guests fall asleep. Full head spa plus extended massage and treatment." data-ja="最も長いコース。ほとんどの方が眠ってしまいます。フルヘッドスパに、マッサージとトリートメントを延長。" data-th="คอร์สที่ยาวที่สุด ลูกค้าส่วนใหญ่หลับไป เฮดสปาเต็มรูปแบบพร้อมนวดและทรีตเมนต์แบบขยายเวลา">The longest course. Most guests fall asleep. Full head spa plus extended massage and treatment.</div>
+            </div>
+        </div>
+
+        <div class="menu-group">
+            <h3 data-en="EMS Scalp Spa" data-ja="EMSスカルプスパ" data-th="EMS สปาหนังศีรษะ">EMS Scalp Spa</h3>
+            <div class="item">
+                <div class="name" data-en="Men's Scalp Revive (EMS)" data-ja="メンズ スカルプリバイブ (EMS)" data-th="ฟื้นฟูหนังศีรษะสำหรับผู้ชาย (EMS)">Men's Scalp Revive (EMS)</div>
+                <div class="meta"><span class="min">70 min</span><span class="price">฿1,690</span></div>
+                <div class="desc" data-en="EMS scalp stimulation with deep cleansing and treatment, for scalp and hair care." data-ja="EMSによる頭皮刺激にディープクレンジングとトリートメントを組み合わせた、頭皮と髪のケア。" data-th="กระตุ้นหนังศีรษะด้วย EMS พร้อมทำความสะอาดล้ำลึกและทรีตเมนต์ เพื่อดูแลหนังศีรษะและเส้นผม">EMS scalp stimulation with deep cleansing and treatment, for scalp and hair care.</div>
+            </div>
+            <div class="item featured">
+                <div class="name"><span data-en="Women's Scalp Revive (EMS)" data-ja="ウィメンズ スカルプリバイブ (EMS)" data-th="ฟื้นฟูหนังศีรษะสำหรับผู้หญิง (EMS)">Women's Scalp Revive (EMS)</span><span class="tag" data-en="+ free facial" data-ja="フェイシャル無料" data-th="+ นวดหน้าฟรี">+ free facial</span></div>
+                <div class="meta"><span class="min">70 min</span><span class="price">฿2,190</span></div>
+                <div class="desc" data-en="EMS scalp treatment, deep cleansing, nourishing treatment and hair care. Facial massage included this month." data-ja="EMS頭皮トリートメント・ディープクレンジング・栄養トリートメント・ヘアケア。今月はフェイシャルマッサージ付き。" data-th="ทรีตเมนต์หนังศีรษะ EMS ทำความสะอาดล้ำลึก บำรุง และดูแลเส้นผม เดือนนี้รวมนวดหน้าฟรี">EMS scalp treatment, deep cleansing, nourishing treatment and hair care. Facial massage included this month.</div>
+            </div>
+        </div>
+
+        <div class="menu-group">
+            <h3 data-en="Facial" data-ja="フェイシャル" data-th="ใบหน้า">Facial</h3>
+            <div class="item">
+                <div class="name" data-en="Facial Massage" data-ja="フェイシャルマッサージ" data-th="นวดหน้า">Facial Massage</div>
+                <div class="meta"><span class="min">40 min</span><span class="price">฿990</span></div>
+                <div class="desc" data-en="Japanese-style facial massage for circulation and a brighter complexion. Can be added to any head spa course." data-ja="血行を促し、顔色を明るくする日本式フェイシャルマッサージ。どのヘッドスパコースにも追加できます。" data-th="นวดหน้าแบบญี่ปุ่น ช่วยการไหลเวียนและผิวกระจ่างใส เพิ่มได้กับทุกคอร์สเฮดสปา">Japanese-style facial massage for circulation and a brighter complexion. Can be added to any head spa course.</div>
+            </div>
+        </div>
+
+        <div class="cta-row menu-cta">
+            <a class="btn btn-line cta-line" href="https://line.me/R/ti/p/@145zdnzj" target="_blank" rel="noopener"><span data-en="Ask or book on LINE" data-ja="LINEで相談・予約" data-th="สอบถามหรือจองผ่าน LINE">Ask or book on LINE</span></a>
+            <a class="btn btn-wa cta-wa" href="https://wa.me/66646681515" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8zm-3 4.4c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.2 2.4.9 2.9.8 3.4.7.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3l-1.9-.9c-.3-.1-.4-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.6l.4-.5.3-.5v-.5l-.9-2.1c-.2-.5-.4-.4-.6-.4z"/></svg><span>WhatsApp</span></a>
+                <a class="btn btn-gold cta-online" href="https://mitsuba.setmore.com/beta" target="_blank" rel="noopener"><span data-en="Book online" data-ja="オンライン予約" data-th="จองออนไลน์">Book online</span></a>
+        </div>
+        <p class="note" data-en="Groups of 3 or more: please contact us on LINE or by phone first so we can arrange rooms and staff." data-ja="3名以上でのご来店は、部屋とスタッフを手配しますので、先にLINEかお電話でご連絡ください。" data-th="มา 3 ท่านขึ้นไป กรุณาติดต่อทาง LINE หรือโทรก่อน เพื่อจัดเตรียมห้องและพนักงาน">Groups of 3 or more: please contact us on LINE or by phone first so we can arrange rooms and staff.</p>
+    </div>
+</section>
+
+<section class="reviews">
+    <div class="wrap center">
+        <div class="eyebrow" data-en="Reviews" data-ja="お客様の声" data-th="รีวิว">Reviews</div>
+        <h2 data-en="What guests say" data-ja="ご来店いただいた方の声" data-th="เสียงจากลูกค้า">What guests say</h2>
+        <p class="lead" data-en="Read real reviews from guests on Google Maps." data-ja="Googleマップに寄せられた実際の口コミをご覧ください。" data-th="อ่านรีวิวจริงจากลูกค้าบน Google Maps">Read real reviews from guests on Google Maps.</p>
+        <div class="review-box">
+            <div class="stars">★★★★★</div>
+            <a class="btn btn-outline dark" href="https://maps.app.goo.gl/QNMPWYG8TApEWqq78" target="_blank" rel="noopener"><span data-en="See reviews on Google" data-ja="Googleで口コミを見る" data-th="ดูรีวิวบน Google">See reviews on Google</span></a>
+        </div>
+    </div>
+</section>
+
+<section class="flow" id="flow">
+    <div class="wrap">
+        <div class="eyebrow" style="color:var(--gold)" data-en="Your visit" data-ja="ご来店の流れ" data-th="ขั้นตอนการใช้บริการ">Your visit</div>
+        <h2 data-en="From booking to walking out refreshed" data-ja="予約から、すっきり帰るまで" data-th="ตั้งแต่จองจนถึงออกจากร้านอย่างสดชื่น">From booking to walking out refreshed</h2>
+        <p class="lead" data-en="No preparation needed. Come as you are." data-ja="準備は不要です。そのままお越しください。" data-th="ไม่ต้องเตรียมอะไร มาได้เลย">No preparation needed. Come as you are.</p>
+        <div class="steps">
+            <div class="step"><strong data-en="Book" data-ja="予約" data-th="จอง">Book</strong><span data-en="On LINE, online or by phone. Choose a course and time." data-ja="LINE・オンライン・電話で。コースと時間を選びます。" data-th="ทาง LINE ออนไลน์ หรือโทร เลือกคอร์สและเวลา">On LINE, online or by phone. Choose a course and time.</span></div>
+            <div class="step"><strong data-en="Arrive, 3rd floor" data-ja="3階へお越しください" data-th="มาถึง ชั้น 3">Arrive, 3rd floor</strong><span data-en="Sukhumvit Soi 33. Take the lift or stairs to the 3rd floor." data-ja="スクンビット・ソイ33。エレベーターか階段で3階へ。" data-th="สุขุมวิท ซอย 33 ขึ้นลิฟต์หรือบันไดไปชั้น 3">Sukhumvit Soi 33. Take the lift or stairs to the 3rd floor.</span></div>
+            <div class="step"><strong data-en="Short consultation" data-ja="簡単なカウンセリング" data-th="ปรึกษาสั้นๆ">Short consultation</strong><span data-en="We check your scalp and ask about pressure and any concerns." data-ja="頭皮の状態と、圧の強さや気になる点をうかがいます。" data-th="ตรวจหนังศีรษะและสอบถามเรื่องแรงกดและสิ่งที่กังวล">We check your scalp and ask about pressure and any concerns.</span></div>
+            <div class="step"><strong data-en="Treatment" data-ja="施術" data-th="ทรีตเมนต์">Treatment</strong><span data-en="Your own room. Lights low, voices kept down." data-ja="半個室で。照明を落とし、静かに。" data-th="ในห้องของคุณ ไฟสลัว เงียบสงบ">Your own room. Lights low, voices kept down.</span></div>
+            <div class="step"><strong data-en="Dry &amp; tea" data-ja="ドライ・お茶" data-th="เป่าผมและดื่มชา">Dry &amp; tea</strong><span data-en="We dry and style your hair, then a cup of tea before you go." data-ja="髪を乾かして整え、お茶を一杯どうぞ。" data-th="เป่าและจัดแต่งทรงผม แล้วดื่มชาก่อนกลับ">We dry and style your hair, then a cup of tea before you go.</span></div>
+        </div>
+    </div>
+</section>
+
+<section class="faq" id="faq">
+    <div class="wrap">
+        <div class="eyebrow" data-en="FAQ" data-ja="よくある質問" data-th="คำถามที่พบบ่อย">FAQ</div>
+        <h2 data-en="Good to know" data-ja="ご来店前に" data-th="สิ่งที่ควรรู้">Good to know</h2>
+        <div style="margin-top:20px">
+            <details>
+                <summary data-en="Is it a private room?" data-ja="個室ですか？" data-th="เป็นห้องส่วนตัวไหม?">Is it a private room?</summary>
+                <p data-en="Each guest has their own room, separated by walls and a curtain rather than a closing door. You will not share a space with other guests. Couples or friends who want to be side by side can ask when booking." data-ja="お一人ずつ、壁とカーテンで仕切られた半個室です。扉で閉め切るタイプではありませんが、他のお客様と同じ空間になることはありません。ご夫婦・ご友人で隣同士をご希望の場合はご予約時にお伝えください。" data-th="แต่ละท่านมีห้องของตัวเอง กั้นด้วยผนังและม่าน ไม่ใช่ประตูปิด แต่จะไม่ใช้พื้นที่ร่วมกับลูกค้าท่านอื่น หากมาเป็นคู่หรือเพื่อนและต้องการอยู่ติดกัน แจ้งตอนจองได้">Each guest has their own room, separated by walls and a curtain rather than a closing door. You will not share a space with other guests. Couples or friends who want to be side by side can ask when booking.</p>
+            </details>
+            <details>
+                <summary data-en="Will my hair be wet afterwards?" data-ja="施術後、髪は濡れたままですか？" data-th="หลังทำผมจะเปียกไหม?">Will my hair be wet afterwards?</summary>
+                <p data-en="No. We wash, dry and style your hair at the end, so you can go straight to dinner or back to work." data-ja="いいえ。最後に洗髪・ドライ・スタイリングまで行いますので、そのまま食事や仕事に戻れます。" data-th="ไม่ค่ะ เราสระ เป่า และจัดแต่งทรงผมให้ตอนจบ ไปทานอาหารหรือกลับไปทำงานต่อได้เลย">No. We wash, dry and style your hair at the end, so you can go straight to dinner or back to work.</p>
+            </details>
+            <details>
+                <summary data-en="Do you speak Japanese or English?" data-ja="日本語は通じますか？" data-th="พูดภาษาญี่ปุ่นหรืออังกฤษได้ไหม?">Do you speak Japanese or English?</summary>
+                <p data-en="Our therapists speak Thai and basic English. Bookings on LINE can be made in Japanese, English or Thai, and the treatment itself needs no conversation." data-ja="セラピストはタイ語と簡単な英語を話します。LINEでのご予約は日本語で対応します。施術中に会話は必要ありません。" data-th="พนักงานพูดภาษาไทยและอังกฤษพื้นฐาน จองทาง LINE ได้ทั้งภาษาญี่ปุ่น อังกฤษ และไทย">Our therapists speak Thai and basic English. Bookings on LINE can be made in Japanese, English or Thai, and the treatment itself needs no conversation.</p>
+            </details>
+            <details>
+                <summary data-en="Can I walk in without a booking?" data-ja="予約なしでも入れますか？" data-th="ไม่จองมาได้ไหม?">Can I walk in without a booking?</summary>
+                <p data-en="Sometimes, but rooms are limited. Please message us on LINE or call before coming so we can hold a room for you." data-ja="空きがあればご案内できますが、部屋数に限りがあります。お越しの前にLINEかお電話でご確認ください。" data-th="บางครั้งได้ แต่ห้องมีจำกัด กรุณาทัก LINE หรือโทรก่อนมา เพื่อให้เราจองห้องไว้ให้">Sometimes, but rooms are limited. Please message us on LINE or call before coming so we can hold a room for you.</p>
+            </details>
+            <details>
+                <summary data-en="What is the cancellation policy?" data-ja="キャンセルについて" data-th="นโยบายการยกเลิก">What is the cancellation policy?</summary>
+                <p data-en="Please let us know at least 24 hours in advance if you need to change or cancel. Same-day cancellations and no-shows mean the room stays empty, so repeated no-shows may affect future bookings." data-ja="変更・キャンセルは24時間前までにご連絡ください。当日キャンセルや無断キャンセルは部屋が空いたままになってしまいます。繰り返された場合、次回以降のご予約をお受けできないことがあります。" data-th="กรุณาแจ้งล่วงหน้าอย่างน้อย 24 ชั่วโมงหากต้องการเปลี่ยนหรือยกเลิก การยกเลิกวันเดียวกันหรือไม่มาตามนัดทำให้ห้องว่างเปล่า หากเกิดซ้ำอาจมีผลต่อการจองครั้งถัดไป">Please let us know at least 24 hours in advance if you need to change or cancel. Same-day cancellations and no-shows mean the room stays empty, so repeated no-shows may affect future bookings.</p>
+            </details>
+            <details>
+                <summary data-en="How can I pay?" data-ja="支払い方法は？" data-th="ชำระเงินอย่างไร?">How can I pay?</summary>
+                <p data-en="Cash and Thai QR payment (PromptPay). Please ask on LINE if you need another method." data-ja="現金とタイのQR決済（PromptPay）がご利用いただけます。その他の方法はLINEでお問い合わせください。" data-th="เงินสดและสแกน QR (พร้อมเพย์) หากต้องการวิธีอื่น สอบถามทาง LINE ได้">Cash and Thai QR payment (PromptPay). Please ask on LINE if you need another method.</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<section class="access" id="access">
+    <div class="wrap">
+        <div class="eyebrow" data-en="Access" data-ja="アクセス" data-th="การเดินทาง">Access</div>
+        <h2 data-en="Sukhumvit Soi 33, 3rd floor" data-ja="スクンビット・ソイ33、3階" data-th="สุขุมวิท ซอย 33 ชั้น 3">Sukhumvit Soi 33, 3rd floor</h2>
+        <div class="access-grid">
+            <div>
+                <div class="floor" data-en="We are on the 3rd floor. Take the lift or stairs. If you can't find us, call 064-668-1515 and we will come down." data-ja="当店は3階です。エレベーターか階段でお上がりください。迷われたら 064-668-1515 へ。お迎えに下ります。" data-th="ร้านอยู่ชั้น 3 ขึ้นลิฟต์หรือบันได หาไม่เจอโทร 064-668-1515 เราจะลงไปรับ">We are on the 3rd floor. Take the lift or stairs. If you can't find us, call 064-668-1515 and we will come down.</div>
+                <dl>
+                    <dt data-en="Address" data-ja="住所" data-th="ที่อยู่">Address</dt>
+                    <dd data-en="8/1 Sukhumvit Soi 33, 3rd Floor, Khlong Tan Nuea, Watthana, Bangkok 10110" data-ja="8/1 Sukhumvit Soi 33, 3rd Floor, Khlong Tan Nuea, Watthana, Bangkok 10110" data-th="8/1 ซอยสุขุมวิท 33 ชั้น 3 คลองตันเหนือ วัฒนา กรุงเทพฯ 10110">8/1 Sukhumvit Soi 33, 3rd Floor, Khlong Tan Nuea, Watthana, Bangkok 10110</dd>
+                    <dt data-en="Station" data-ja="最寄駅" data-th="สถานี">Station</dt>
+                    <dd data-en="BTS Phrom Phong, 6 min walk" data-ja="BTSプロンポン駅 徒歩6分" data-th="BTS พร้อมพงษ์ เดิน 6 นาที">BTS Phrom Phong, 6 min walk</dd>
+                    <dt data-en="Hours" data-ja="営業時間" data-th="เวลาเปิด">Hours</dt>
+                    <dd data-en="10:00–19:00 (Tue until 17:00). Closed Wednesday." data-ja="10:00–19:00（火曜は17:00まで）水曜定休" data-th="10:00–19:00 (อังคารถึง 17:00) หยุดวันพุธ">10:00–19:00 (Tue until 17:00). Closed Wednesday.</dd>
+                    <dt data-en="Phone" data-ja="電話" data-th="โทร">Phone</dt>
+                    <dd><a href="tel:+66646681515">064-668-1515</a></dd>
+                    <dt>WhatsApp</dt>
+                    <dd><a href="https://wa.me/66646681515" target="_blank" rel="noopener">+66 64-668-1515</a></dd>
+                    <dt>LINE</dt>
+                    <dd><a href="https://line.me/R/ti/p/@145zdnzj" target="_blank" rel="noopener">@145zdnzj</a></dd>
+                </dl>
+                <div class="cta-row" style="margin-top:22px">
+                    <a class="btn btn-outline dark" href="https://maps.app.goo.gl/QNMPWYG8TApEWqq78" target="_blank" rel="noopener"><span data-en="Open in Google Maps" data-ja="Googleマップで開く" data-th="เปิดใน Google Maps">Open in Google Maps</span></a>
+                </div>
+            </div>
+            <div class="map">
+                <iframe loading="lazy" title="Map" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7751.49816126047!2d100.56489107592438!3d13.733635597712137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29f53068c229f%3A0x46622fb45c64cde9!2sMitsuba%20Head%20%26%20facial%20spa!5e0!3m2!1sen!2sth!4v1750919107739!5m2!1sen!2sth"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="promo" id="book">
+    <div class="wrap center">
+        <div class="eyebrow" data-en="Book" data-ja="ご予約" data-th="จอง">Book</div>
+        <h2 data-en="Reserve your room" data-ja="お部屋をご予約ください" data-th="จองห้องของคุณ">Reserve your room</h2>
+        <p class="lead" style="color:var(--sage)" data-en="LINE is the fastest way. Online booking works 24 hours." data-ja="LINEが一番早く確実です。オンライン予約は24時間受け付けています。" data-th="LINE เร็วที่สุด จองออนไลน์ได้ 24 ชั่วโมง">LINE is the fastest way. Online booking works 24 hours.</p>
+        <div class="cta-row" style="max-width:560px;margin:0 auto">
+            <a class="btn btn-line cta-line" href="https://line.me/R/ti/p/@145zdnzj" target="_blank" rel="noopener"><span data-en="Book on LINE" data-ja="LINEで予約する" data-th="จองผ่าน LINE">Book on LINE</span></a>
+            <a class="btn btn-wa cta-wa" href="https://wa.me/66646681515" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8zm-3 4.4c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.2 2.4.9 2.9.8 3.4.7.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3l-1.9-.9c-.3-.1-.4-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.6l.4-.5.3-.5v-.5l-.9-2.1c-.2-.5-.4-.4-.6-.4z"/></svg><span>WhatsApp</span></a>
+                <a class="btn btn-gold cta-online" href="https://mitsuba.setmore.com/beta" target="_blank" rel="noopener"><span data-en="Book online" data-ja="オンラインで予約" data-th="จองออนไลน์">Book online</span></a>
+            <a class="btn btn-outline" href="tel:+66646681515" style="flex-basis:100%;order:3"><span data-en="Call 064-668-1515" data-ja="電話 064-668-1515" data-th="โทร 064-668-1515">Call 064-668-1515</span></a>
+        </div>
+    </div>
+</section>
+
+<div class="ig">
+    <div class="wrap">
+        <a href="https://www.instagram.com/mitsuba.bangkok/" target="_blank" rel="noopener">Instagram @mitsuba.bangkok →</a>
+    </div>
+</div>
+
+<footer>
+    <div class="wrap">
+        <a href="#top" class="brand">MITSUBA<small>HEAD SPA · BANGKOK</small></a>
+        <div class="links">
+            <a href="#menu" data-en="Menu" data-ja="メニュー" data-th="เมนู">Menu</a>
+            <a href="#faq" data-en="FAQ" data-ja="よくある質問" data-th="คำถามที่พบบ่อย">FAQ</a>
+            <a href="#access" data-en="Access" data-ja="アクセス" data-th="การเดินทาง">Access</a>
+            <a href="mailto:mitsubaspa@gmail.com">mitsubaspa@gmail.com</a>
+            <a href="https://www.instagram.com/mitsuba.bangkok/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+        <div>© 2026 Mitsuba Head Spa Bangkok</div>
+    </div>
+</footer>
+
+<div class="sticky">
+    <a class="btn btn-line cta-line" href="https://line.me/R/ti/p/@145zdnzj" target="_blank" rel="noopener"><span data-en="LINE" data-ja="LINE予約" data-th="จอง LINE">LINE</span></a>
+    <a class="btn btn-wa cta-wa" href="https://wa.me/66646681515" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8zm-3 4.4c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.2 2.4.9 2.9.8 3.4.7.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3l-1.9-.9c-.3-.1-.4-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.6l.4-.5.3-.5v-.5l-.9-2.1c-.2-.5-.4-.4-.6-.4z"/></svg><span>WhatsApp</span></a>
+                <a class="btn btn-gold cta-online" href="https://mitsuba.setmore.com/beta" target="_blank" rel="noopener"><span data-en="Book online" data-ja="オンライン予約" data-th="จองออนไลน์">Book online</span></a>
+    <a class="btn btn-call" href="tel:+66646681515" aria-label="Call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></a>
+</div>
+
+<script>
+(function () {
+    // ---- Language ----
+    var SUPPORTED = ['en', 'ja', 'th'];
+    function detect() {
+        var stored = null;
+        try { stored = localStorage.getItem('preferredLanguage'); } catch (e) {}
+        if (stored && SUPPORTED.indexOf(stored) !== -1) return stored;
+        var nav = (navigator.language || 'en').toLowerCase();
+        if (nav.indexOf('ja') === 0) return 'ja';
+        if (nav.indexOf('th') === 0) return 'th';
+        return 'en';
+    }
+    function apply(lang) {
+        document.documentElement.lang = lang;
+        document.documentElement.setAttribute('data-lang', lang);
+        var nodes = document.querySelectorAll('[data-' + lang + ']');
+        for (var i = 0; i < nodes.length; i++) {
+            var el = nodes[i];
+            var txt = el.getAttribute('data-' + lang);
+            if (txt !== null) el.innerHTML = txt;
+        }
+        var btns = document.querySelectorAll('.lang-btn');
+        for (var j = 0; j < btns.length; j++) {
+            btns[j].classList.toggle('active', btns[j].getAttribute('data-lang') === lang);
+        }
+        try { localStorage.setItem('preferredLanguage', lang); } catch (e) {}
+    }
+    document.querySelectorAll('.lang-btn').forEach(function (b) {
+        b.addEventListener('click', function () { apply(b.getAttribute('data-lang')); });
+    });
+    apply(detect());
+
+    // ---- Conversion & engagement tracking (Google Ads + GA4) ----
+    var ADS_CONVERSION = 'AW-17421266988/iimdCM7Ho4UbEKzgjfNA';
+    function classify(el) {
+        var a = el.closest && el.closest('a[href]');
+        if (!a) return null;
+        var href = a.getAttribute('href') || '';
+        if (href.indexOf('mitsuba.setmore.com') !== -1) return { type: 'booking', ads: true };
+        if (href.indexOf('line.me') !== -1) return { type: 'line', ads: true };
+        if (href.indexOf('wa.me') !== -1) return { type: 'whatsapp', ads: true };
+        if (href.indexOf('tel:') === 0) return { type: 'phone', ads: true };
+        if (href.indexOf('mailto:') === 0) return { type: 'email', ads: false };
+        if (href.indexOf('instagram.com') !== -1) return { type: 'instagram', ads: false };
+        if (href.indexOf('maps.app.goo.gl') !== -1 || href.indexOf('google.com/maps') !== -1) return { type: 'map', ads: false };
+        return null;
+    }
+    document.addEventListener('click', function (e) {
+        var hit = classify(e.target);
+        if (!hit || typeof gtag !== 'function') return;
+        var lang = document.documentElement.getAttribute('data-lang') || 'en';
+        var host = e.target.closest('section, .sticky');
+        var placement = host ? (host.id || (host.classList.contains('sticky') ? 'sticky' : host.className.split(' ')[0])) : 'other';
+        if (hit.ads) {
+            gtag('event', 'conversion', { 'send_to': ADS_CONVERSION });
+        }
+        if (false) {
+            gtag('event', hit.type + '_click', { 'event_category': 'engagement', 'language': lang, 'placement': placement });
+            if (hit.ads) gtag('event', 'generate_lead', { 'method': hit.type, 'language': lang, 'placement': placement });
+        }
+    }, true);
+})();
+</script>
+</body>
+</html>
