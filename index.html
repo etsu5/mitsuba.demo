@@ -109,6 +109,13 @@
         .btn-gold:hover { background: var(--gold-light); border-color: var(--gold-light); }
         .btn-line { background: #06C755; color: #fff; border-color: #06C755; }
         .btn-line:hover { background: #05b04b; }
+        .btn-wa { background: #25D366; color: #fff; border-color: #25D366; }
+        .btn-wa:hover { background: #1fbf5b; }
+        /* WhatsApp replaces LINE for English visitors */
+        .cta-wa { display: none; }
+        html[data-lang="en"] .cta-wa { display: inline-flex; }
+        html[data-lang="en"] .cta-line { display: none; }
+        .cta-row .cta-wa, .sticky .cta-wa { order: 2; }
         .btn-outline { background: transparent; color: var(--cream); border-color: rgba(245,241,232,.6); }
         .btn-outline:hover { border-color: var(--cream); }
         .btn-outline.dark { color: var(--green); border-color: var(--green); }
@@ -296,7 +303,8 @@
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.6 7.4 8.4 8.1.3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.6 1.1-.5 5.8-3.4 7.9-5.8C21.4 13.9 22 12.1 22 10.2 22 5.7 17.5 2 12 2zm-3.6 10.7H6.1c-.3 0-.5-.2-.5-.5V7.9c0-.3.2-.5.5-.5s.5.2.5.5v3.8h1.8c.3 0 .5.2.5.5s-.2.5-.5.5zm1.9-.5c0 .3-.2.5-.5.5s-.5-.2-.5-.5V7.9c0-.3.2-.5.5-.5s.5.2.5.5v4.3zm5 0c0 .2-.1.4-.3.5h-.2c-.2 0-.3-.1-.4-.2l-2.2-3v2.7c0 .3-.2.5-.5.5s-.5-.2-.5-.5V7.9c0-.2.1-.4.3-.5h.2c.2 0 .3.1.4.2l2.2 3V7.9c0-.3.2-.5.5-.5s.5.2.5.5v4.3zm3.5-2.6c.3 0 .5.2.5.5s-.2.5-.5.5h-1.8v1.1h1.8c.3 0 .5.2.5.5s-.2.5-.5.5h-2.3c-.3 0-.5-.2-.5-.5V7.9c0-.3.2-.5.5-.5h2.3c.3 0 .5.2.5.5s-.2.5-.5.5h-1.8v1.2h1.8z"/></svg>
                 <span data-en="Book on LINE" data-ja="LINEで予約する" data-th="จองผ่าน LINE">Book on LINE</span>
             </a>
-            <a class="btn btn-gold cta-online" href="https://mitsuba.setmore.com/beta" target="_blank" rel="noopener">
+            <a class="btn btn-wa cta-wa" href="https://wa.me/66646681515" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8zm-3 4.4c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.2 2.4.9 2.9.8 3.4.7.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3l-1.9-.9c-.3-.1-.4-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.6l.4-.5.3-.5v-.5l-.9-2.1c-.2-.5-.4-.4-.6-.4z"/></svg><span>WhatsApp</span></a>
+                <a class="btn btn-gold cta-online" href="https://mitsuba.setmore.com/beta" target="_blank" rel="noopener">
                 <span data-en="Book online" data-ja="オンラインで予約" data-th="จองออนไลน์">Book online</span>
             </a>
         </div>
@@ -340,7 +348,8 @@
                 <div class="price">฿2,190<small>/ 70 min</small></div>
                 <div class="cta-row" style="margin-top:14px">
                     <a class="btn btn-line cta-line" href="https://line.me/R/ti/p/@145zdnzj" target="_blank" rel="noopener"><span data-en="Book on LINE" data-ja="LINEで予約" data-th="จองผ่าน LINE">Book on LINE</span></a>
-                    <a class="btn btn-gold cta-online" href="https://mitsuba.setmore.com/beta" target="_blank" rel="noopener"><span data-en="Book online" data-ja="オンライン予約" data-th="จองออนไลน์">Book online</span></a>
+                    <a class="btn btn-wa cta-wa" href="https://wa.me/66646681515" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8zm-3 4.4c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.2 2.4.9 2.9.8 3.4.7.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3l-1.9-.9c-.3-.1-.4-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.6l.4-.5.3-.5v-.5l-.9-2.1c-.2-.5-.4-.4-.6-.4z"/></svg><span>WhatsApp</span></a>
+                <a class="btn btn-gold cta-online" href="https://mitsuba.setmore.com/beta" target="_blank" rel="noopener"><span data-en="Book online" data-ja="オンライン予約" data-th="จองออนไลน์">Book online</span></a>
                 </div>
             </div>
         </div>
@@ -402,7 +411,8 @@
 
         <div class="cta-row menu-cta">
             <a class="btn btn-line cta-line" href="https://line.me/R/ti/p/@145zdnzj" target="_blank" rel="noopener"><span data-en="Ask or book on LINE" data-ja="LINEで相談・予約" data-th="สอบถามหรือจองผ่าน LINE">Ask or book on LINE</span></a>
-            <a class="btn btn-gold cta-online" href="https://mitsuba.setmore.com/beta" target="_blank" rel="noopener"><span data-en="Book online" data-ja="オンライン予約" data-th="จองออนไลน์">Book online</span></a>
+            <a class="btn btn-wa cta-wa" href="https://wa.me/66646681515" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8zm-3 4.4c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.2 2.4.9 2.9.8 3.4.7.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3l-1.9-.9c-.3-.1-.4-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.6l.4-.5.3-.5v-.5l-.9-2.1c-.2-.5-.4-.4-.6-.4z"/></svg><span>WhatsApp</span></a>
+                <a class="btn btn-gold cta-online" href="https://mitsuba.setmore.com/beta" target="_blank" rel="noopener"><span data-en="Book online" data-ja="オンライン予約" data-th="จองออนไลน์">Book online</span></a>
         </div>
         <p class="note" data-en="Groups of 3 or more: please contact us on LINE or by phone first so we can arrange rooms and staff." data-ja="3名以上でのご来店は、部屋とスタッフを手配しますので、先にLINEかお電話でご連絡ください。" data-th="มา 3 ท่านขึ้นไป กรุณาติดต่อทาง LINE หรือโทรก่อน เพื่อจัดเตรียมห้องและพนักงาน">Groups of 3 or more: please contact us on LINE or by phone first so we can arrange rooms and staff.</p>
     </div>
@@ -484,6 +494,8 @@
                     <dd data-en="10:00–19:00 (Tue until 17:00). Closed Wednesday." data-ja="10:00–19:00（火曜は17:00まで）水曜定休" data-th="10:00–19:00 (อังคารถึง 17:00) หยุดวันพุธ">10:00–19:00 (Tue until 17:00). Closed Wednesday.</dd>
                     <dt data-en="Phone" data-ja="電話" data-th="โทร">Phone</dt>
                     <dd><a href="tel:+66646681515">064-668-1515</a></dd>
+                    <dt>WhatsApp</dt>
+                    <dd><a href="https://wa.me/66646681515" target="_blank" rel="noopener">+66 64-668-1515</a></dd>
                     <dt>LINE</dt>
                     <dd><a href="https://line.me/R/ti/p/@145zdnzj" target="_blank" rel="noopener">@145zdnzj</a></dd>
                 </dl>
@@ -505,7 +517,8 @@
         <p class="lead" style="color:var(--sage)" data-en="LINE is the fastest way. Online booking works 24 hours." data-ja="LINEが一番早く確実です。オンライン予約は24時間受け付けています。" data-th="LINE เร็วที่สุด จองออนไลน์ได้ 24 ชั่วโมง">LINE is the fastest way. Online booking works 24 hours.</p>
         <div class="cta-row" style="max-width:560px;margin:0 auto">
             <a class="btn btn-line cta-line" href="https://line.me/R/ti/p/@145zdnzj" target="_blank" rel="noopener"><span data-en="Book on LINE" data-ja="LINEで予約する" data-th="จองผ่าน LINE">Book on LINE</span></a>
-            <a class="btn btn-gold cta-online" href="https://mitsuba.setmore.com/beta" target="_blank" rel="noopener"><span data-en="Book online" data-ja="オンラインで予約" data-th="จองออนไลน์">Book online</span></a>
+            <a class="btn btn-wa cta-wa" href="https://wa.me/66646681515" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8zm-3 4.4c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.2 2.4.9 2.9.8 3.4.7.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3l-1.9-.9c-.3-.1-.4-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.6l.4-.5.3-.5v-.5l-.9-2.1c-.2-.5-.4-.4-.6-.4z"/></svg><span>WhatsApp</span></a>
+                <a class="btn btn-gold cta-online" href="https://mitsuba.setmore.com/beta" target="_blank" rel="noopener"><span data-en="Book online" data-ja="オンラインで予約" data-th="จองออนไลน์">Book online</span></a>
             <a class="btn btn-outline" href="tel:+66646681515" style="flex-basis:100%;order:3"><span data-en="Call 064-668-1515" data-ja="電話 064-668-1515" data-th="โทร 064-668-1515">Call 064-668-1515</span></a>
         </div>
     </div>
@@ -533,7 +546,8 @@
 
 <div class="sticky">
     <a class="btn btn-line cta-line" href="https://line.me/R/ti/p/@145zdnzj" target="_blank" rel="noopener"><span data-en="LINE" data-ja="LINE予約" data-th="จอง LINE">LINE</span></a>
-    <a class="btn btn-gold cta-online" href="https://mitsuba.setmore.com/beta" target="_blank" rel="noopener"><span data-en="Book online" data-ja="オンライン予約" data-th="จองออนไลน์">Book online</span></a>
+    <a class="btn btn-wa cta-wa" href="https://wa.me/66646681515" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8zm-3 4.4c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.2 2.4.9 2.9.8 3.4.7.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3l-1.9-.9c-.3-.1-.4-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.6l.4-.5.3-.5v-.5l-.9-2.1c-.2-.5-.4-.4-.6-.4z"/></svg><span>WhatsApp</span></a>
+                <a class="btn btn-gold cta-online" href="https://mitsuba.setmore.com/beta" target="_blank" rel="noopener"><span data-en="Book online" data-ja="オンライン予約" data-th="จองออนไลน์">Book online</span></a>
     <a class="btn btn-call" href="tel:+66646681515" aria-label="Call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></a>
 </div>
 
